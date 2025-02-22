@@ -23,7 +23,11 @@ export default function RootLayout() {
   if (!loaded) return null;
 
   return (
-    <Stack>
+    <Stack
+      screenOptions={{
+        headerShown: false,
+      }}
+    >
       <Stack.Screen name="(root)/(tabs)" options={{ headerTitle: "Tabs" }} />
       <Stack.Screen
         name="(root)/properties/[id]"
