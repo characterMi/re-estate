@@ -1,6 +1,7 @@
 import { useFonts } from "expo-font";
 import { SplashScreen, Stack } from "expo-router";
 
+import { GlobalProvider } from "@/lib/global-provider";
 import { useEffect } from "react";
 import "./global.css";
 
@@ -23,16 +24,21 @@ export default function RootLayout() {
   if (!loaded) return null;
 
   return (
-    <Stack
-      screenOptions={{
-        headerShown: false,
-      }}
-    >
-      <Stack.Screen name="(root)/(tabs)" options={{ headerTitle: "Tabs" }} />
-      <Stack.Screen
-        name="(root)/properties/[id]"
-        options={{ headerTitle: "Property id", animation: "slide_from_right" }}
-      />
-    </Stack>
+    <GlobalProvider>
+      <Stack
+        screenOptions={{
+          headerShown: false,
+        }}
+      >
+        <Stack.Screen name="(root)/(tabs)" options={{ headerTitle: "Tabs" }} />
+        <Stack.Screen
+          name="(root)/properties/[id]"
+          options={{
+            headerTitle: "Property id",
+            animation: "slide_from_right",
+          }}
+        />
+      </Stack>
+    </GlobalProvider>
   );
 }
