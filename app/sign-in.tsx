@@ -29,7 +29,7 @@ const SignIn = () => {
   }
 
   return (
-    <SafeAreaView className="bg-white h-full">
+    <SafeAreaView className="bg-white h-full mt-2">
       <ScrollView contentContainerClassName="h-full">
         <Image
           source={images.onboarding}
