@@ -30,11 +30,16 @@ export default function RootLayout() {
           headerShown: false,
         }}
       >
-        <Stack.Screen name="(root)/(tabs)" options={{ headerTitle: "Tabs" }} />
+        <Stack.Screen name="(root)/(tabs)" />
         <Stack.Screen
           name="(root)/properties/[id]"
           options={{
-            headerTitle: "Property id",
+            animation: "slide_from_right",
+          }}
+        />
+        <Stack.Screen
+          name="sign-in"
+          options={{
             animation: "slide_from_right",
           }}
         />
