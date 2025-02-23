@@ -30,13 +30,7 @@ export default function RootLayout() {
           headerShown: false,
         }}
       >
-        <Stack.Screen name="(root)/(tabs)" />
-        <Stack.Screen
-          name="(root)/properties/[id]"
-          options={{
-            animation: "slide_from_right",
-          }}
-        />
+        <Stack.Screen name="(root)" />
         <Stack.Screen
           name="sign-in"
           options={{

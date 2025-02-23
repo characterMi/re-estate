@@ -1,5 +1,5 @@
 import { useGlobalContext } from "@/lib/global-provider";
-import { Slot } from "expo-router";
+import { Stack } from "expo-router";
 import { ActivityIndicator } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
@@ -16,5 +16,15 @@ export default function AppLayout() {
 
   // if (!isLoggedIn) return <Redirect href={"/sign-in"} />;
 
-  return <Slot />;
+  return (
+    <Stack screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="(tabs)" />
+      <Stack.Screen
+        name="properties/[id]"
+        options={{
+          animation: "slide_from_right",
+        }}
+      />
+    </Stack>
+  );
 }
