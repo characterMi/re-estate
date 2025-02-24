@@ -1,10 +1,11 @@
-import { Text, View } from "react-native";
+import { Properties } from "@/components/shared/properties";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const Explore = () => {
   return (
-    <View className="flex-1 justify-center items-center">
-      <Text>Explore</Text>
-    </View>
+    <SafeAreaView className="bg-white h-full">
+      <Properties isInExplore />
+    </SafeAreaView>
   );
 };
 

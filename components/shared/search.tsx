@@ -1,17 +1,16 @@
 import icons from "@/constants/icons";
-import { useLocalSearchParams, usePathname, useRouter } from "expo-router";
+import { useLocalSearchParams, useRouter } from "expo-router";
 import { useState } from "react";
 import { Image, TextInput, TouchableOpacity, View } from "react-native";
 import { useDebouncedCallback } from "use-debounce";
 
 const Search = () => {
-  const path = usePathname();
   const params = useLocalSearchParams<{ query?: string }>();
   const [search, setSearch] = useState(params.query);
   const router = useRouter();
 
   const debouncedSearch = useDebouncedCallback(
-    (text?: string) => router.setParams({ query: text }),
+    (text?: string) => router.setParams({ query: text, filter: "All" }),
     500
   );
 
@@ -26,7 +25,7 @@ const Search = () => {
         <Image source={icons.search} className="size-5" />
         <TextInput
           value={search}
-          onChangeText={(text) => setSearch(text)}
+          onChangeText={handleSearch}
           placeholder="Search for anything"
           className="text-sm font-rubik text-black-300 ml-2 flex-1"
         />

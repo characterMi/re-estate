@@ -2,7 +2,7 @@ import icons from "@/constants/icons";
 import { useGlobalContext } from "@/lib/global-provider";
 import { Image, Text, View } from "react-native";
 
-const UserProfile = () => {
+const UserData = () => {
   const { user } = useGlobalContext();
 
   return (
@@ -28,4 +28,4 @@ const UserProfile = () => {
   );
 };
 
-export default UserProfile;
+export default UserData;

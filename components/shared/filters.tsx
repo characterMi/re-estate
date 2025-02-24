@@ -18,7 +18,7 @@ const Filters = () => {
     }
 
     setSelectedCategory(category);
-    router.setParams({ filter: category });
+    router.setParams({ filter: category, query: "" });
   }
 
   return (
@@ -30,7 +30,7 @@ const Filters = () => {
       {categories.map((item) => (
         <TouchableOpacity
           key={item.title}
-          className={`items-start px-4 py-2 rounded-full mr-4 ${
+          className={`items-start px-4 pt-2 pb-1 rounded-full mr-4 ${
             selectedCategory === item.category
               ? "bg-primary-300"
               : "bg-primary-100 border border-primary-200"

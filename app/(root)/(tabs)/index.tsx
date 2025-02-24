@@ -1,4 +1,4 @@
-import { FeaturedProperties, Properties } from "@/components/home/properties";
+import { FeaturedProperties, Properties } from "@/components/shared/properties";
 import { SafeAreaView } from "react-native";
 
 export default function Index() {
