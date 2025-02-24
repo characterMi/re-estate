@@ -50,7 +50,9 @@ const Property = () => {
 
           <Overview description={property?.description} />
 
-          <Facilities facilities={property?.facilities} />
+          {property?.facilities.length > 0 && (
+            <Facilities facilities={property?.facilities} />
+          )}
 
           {property?.gallery.length > 0 && (
             <Gallery gallery={property?.gallery} />

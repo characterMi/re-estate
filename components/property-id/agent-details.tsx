@@ -1,10 +1,11 @@
 import icons from "@/constants/icons";
+import images from "@/constants/images";
 import { Image, Text, View } from "react-native";
 
 const AgentDetails = ({
   agent,
 }: {
-  agent: { avatar: string; name: string; email: string };
+  agent: { avatar?: string; name: string; email: string };
 }) => (
   <View className="w-full border-t border-primary-200 pt-7 mt-5">
     <Text className="text-black-300 text-xl font-rubik-bold">Agent</Text>
@@ -12,7 +13,7 @@ const AgentDetails = ({
     <View className="flex flex-row items-center justify-between mt-4">
       <View className="flex flex-row items-center">
         <Image
-          source={{ uri: agent.avatar }}
+          source={agent.avatar ? { uri: agent.avatar } : images.avatar}
           className="size-14 rounded-full"
         />
 
