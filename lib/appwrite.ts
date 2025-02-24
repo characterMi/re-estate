@@ -156,3 +156,16 @@ export async function getProperties({
     return [];
   }
 }
+
+export async function getPropertyById({ id }: { id: string }) {
+  try {
+    return await databases.getDocument(
+      config.databaseId,
+      config.propertiesCollectionId,
+      id
+    );
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
+}
