@@ -27,7 +27,7 @@ const Filters = () => {
       showsHorizontalScrollIndicator={false}
       className="mt-3"
     >
-      {categories.map((item, index) => (
+      {categories.map((item) => (
         <TouchableOpacity
           key={item.title}
           className={`items-start px-4 py-2 rounded-full mr-4 ${

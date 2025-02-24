@@ -31,12 +31,7 @@ export default function RootLayout() {
         }}
       >
         <Stack.Screen name="(root)" />
-        <Stack.Screen
-          name="sign-in"
-          options={{
-            animation: "slide_from_right",
-          }}
-        />
+        <Stack.Screen name="sign-in" />
       </Stack>
     </GlobalProvider>
   );

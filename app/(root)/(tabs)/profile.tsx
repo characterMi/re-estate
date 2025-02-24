@@ -61,7 +61,7 @@ const Profile = () => {
     <SafeAreaView className="h-full bg-white">
       <ScrollView
         showsVerticalScrollIndicator={false}
-        contentContainerClassName="pb-32 px-7"
+        contentContainerClassName="pb-24 px-7"
       >
         <View className="flex-row items-center justify-between mt-5">
           <Text className="text-left font-rubik-bold">Profile</Text>
@@ -90,8 +90,8 @@ const Profile = () => {
         </View>
 
         <View className="mt-5 border-t pt-5 border-primary-200">
-          {settings.slice(2).map((item, index) => (
-            <SettingsItem key={index} {...item} />
+          {settings.slice(2).map((item) => (
+            <SettingsItem key={item.title} {...item} />
           ))}
         </View>
 
@@ -104,6 +104,13 @@ const Profile = () => {
             showArrow={false}
           />
         </View>
+
+        <Text className="text-center text-base text-black-200 mt-5">
+          Made with 💙 by{" "}
+          <Text className="text-primary-300 font-rubik-medium">
+            Abolfazl Taghadosi
+          </Text>
+        </Text>
       </ScrollView>
     </SafeAreaView>
   );

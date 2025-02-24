@@ -38,7 +38,9 @@ export const FeaturedCard = ({
           {name}
         </Text>
 
-        <Text className="text-base font-rubik text-white">{address}</Text>
+        <Text className="text-base font-rubik text-white" numberOfLines={1}>
+          {address}
+        </Text>
 
         <View className="w-full flex-row items-center justify-between">
           <Text className="text-xl font-rubik-extrabold text-white">
@@ -59,7 +61,7 @@ export const Card = ({
   return (
     <TouchableOpacity
       onPress={onPress}
-      className="flex-1 w-full mt-4 px-3 py-4 rounded-lg bg-white shadow-lg shadow-black-100/70 relative"
+      className="flex-1 w-full mt-3 px-3 py-4 rounded-lg bg-white shadow-lg shadow-black-100/70 relative"
     >
       <View className="flex-row items-center absolute px-2 top-5 right-5 bg-white/90 p-1 rounded-full z-50">
         <Image source={icons.star} className="size-2.5" />
@@ -78,7 +80,9 @@ export const Card = ({
           {name}
         </Text>
 
-        <Text className="text-xs font-rubik text-black-200">{address}</Text>
+        <Text className="text-xs font-rubik text-black-200" numberOfLines={1}>
+          {address}
+        </Text>
 
         <View className="mt-2 flex-row items-center justify-between">
           <Text className="text-base font-rubik-bold text-primary-300">
